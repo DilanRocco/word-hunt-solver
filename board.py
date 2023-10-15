@@ -50,3 +50,4 @@ class Board:
         shows this board outputting a window
         """
         self.__draw_board().show()
+
