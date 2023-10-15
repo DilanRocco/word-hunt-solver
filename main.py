@@ -1,16 +1,20 @@
 import sys
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from board import Board
 
 
 # the word hunt destroyer
-def run_solver(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def run_solver(r, c):
+    chars = ["a", "b", "c", "d",
+             "e", "f", "g", "h",
+             "i", "j", "k", "l",
+             "m", "n", "o", "p"]
+    num_of_chars = r * c
+    while len(chars) < num_of_chars:
+        char = input()
+        chars.append(char)
+    Board(chars, r, c).show_board()
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    run_solver('PyCharm')
-
+    run_solver(4, 4)
